@@ -1,0 +1,72 @@
+name: visit page with chrome
+on:
+  schedule:
+    - cron: "12 7-23 * * *"
+    - cron: "38 7-23 * * *"
+    - cron: "12 0-6/2 * * *"
+    - cron: "38 0-6/2 * * *"
+
+  workflow_dispatch:
+
+jobs:
+  chrome1:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Chrome headless
+        uses: cypress-io/github-action@v6
+        env:
+          CYPRESS_URL: ${{ secrets.CYPRESS_URL }}
+        with:
+          browser: chrome
+
+  chrome2:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Chrome headless
+        uses: cypress-io/github-action@v6
+        env:
+          CYPRESS_URL: ${{ secrets.CYPRESS_URL }}
+        with:
+          browser: chrome
+  chrome3:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Chrome headless
+        uses: cypress-io/github-action@v6
+        env:
+          CYPRESS_URL: ${{ secrets.CYPRESS_URL }}
+        with:
+          browser: chrome
+  chrome4:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Chrome headless
+        uses: cypress-io/github-action@v6
+        env:
+          CYPRESS_URL: ${{ secrets.CYPRESS_URL }}
+        with:
+          browser: chrome
+  chrome5:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Chrome headless
+        uses: cypress-io/github-action@v6
+        env:
+          CYPRESS_URL: ${{ secrets.CYPRESS_URL }}
+        with:
+          browser: chrome
