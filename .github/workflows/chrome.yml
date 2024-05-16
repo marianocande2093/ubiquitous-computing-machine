@@ -125,39 +125,3 @@ jobs:
           CYPRESS_URL: ${{ secrets.CYPRESS_URL }}
         with:
           browser: chrome
-  chrome113:
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Chrome headless
-        uses: cypress-io/github-action@v6
-        env:
-          CYPRESS_URL: ${{ secrets.CYPRESS_URL }}
-        with:
-          browser: chrome
-  chrome114:
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Chrome headless
-        uses: cypress-io/github-action@v6
-        env:
-          CYPRESS_URL: ${{ secrets.CYPRESS_URL }}
-        with:
-          browser: chrome
-  chrome115:
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Chrome headless
-        uses: cypress-io/github-action@v6
-        env:
-          CYPRESS_URL: ${{ secrets.CYPRESS_URL }}
-        with:
-          browser: chrome
