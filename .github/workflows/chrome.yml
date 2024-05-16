@@ -1,11 +1,5 @@
 name: visit page with chrome
 on:
-  schedule:
-    - cron: "12 7-23 * * *"
-    - cron: "38 7-23 * * *"
-    - cron: "12 0-6/2 * * *"
-    - cron: "38 0-6/2 * * *"
-
   workflow_dispatch:
 
 jobs:
@@ -59,6 +53,103 @@ jobs:
         with:
           browser: chrome
   chrome5:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Chrome headless
+        uses: cypress-io/github-action@v6
+        env:
+          CYPRESS_URL: ${{ secrets.CYPRESS_URL }}
+        with:
+          browser: chrome
+  chrome11:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Chrome headless
+        uses: cypress-io/github-action@v6
+        env:
+          CYPRESS_URL: ${{ secrets.CYPRESS_URL }}
+        with:
+          browser: chrome
+
+  chrome12:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Chrome headless
+        uses: cypress-io/github-action@v6
+        env:
+          CYPRESS_URL: ${{ secrets.CYPRESS_URL }}
+        with:
+          browser: chrome
+  chrome13:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Chrome headless
+        uses: cypress-io/github-action@v6
+        env:
+          CYPRESS_URL: ${{ secrets.CYPRESS_URL }}
+        with:
+          browser: chrome
+  chrome14:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Chrome headless
+        uses: cypress-io/github-action@v6
+        env:
+          CYPRESS_URL: ${{ secrets.CYPRESS_URL }}
+        with:
+          browser: chrome
+  chrome15:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Chrome headless
+        uses: cypress-io/github-action@v6
+        env:
+          CYPRESS_URL: ${{ secrets.CYPRESS_URL }}
+        with:
+          browser: chrome
+  chrome113:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Chrome headless
+        uses: cypress-io/github-action@v6
+        env:
+          CYPRESS_URL: ${{ secrets.CYPRESS_URL }}
+        with:
+          browser: chrome
+  chrome114:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Chrome headless
+        uses: cypress-io/github-action@v6
+        env:
+          CYPRESS_URL: ${{ secrets.CYPRESS_URL }}
+        with:
+          browser: chrome
+  chrome115:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
