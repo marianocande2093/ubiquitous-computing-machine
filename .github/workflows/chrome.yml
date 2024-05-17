@@ -1,5 +1,7 @@
 name: visit page with chrome
 on:
+  schedule:
+    - cron: "16 0 * * *"
   workflow_dispatch:
 
 jobs:
@@ -64,7 +66,7 @@ jobs:
           CYPRESS_URL: ${{ secrets.CYPRESS_URL }}
         with:
           browser: chrome
-  chrome11:
+  chrome6:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
@@ -77,7 +79,7 @@ jobs:
         with:
           browser: chrome
 
-  chrome12:
+  chrome7:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
@@ -89,7 +91,7 @@ jobs:
           CYPRESS_URL: ${{ secrets.CYPRESS_URL }}
         with:
           browser: chrome
-  chrome13:
+  chrome8:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
@@ -101,7 +103,7 @@ jobs:
           CYPRESS_URL: ${{ secrets.CYPRESS_URL }}
         with:
           browser: chrome
-  chrome14:
+  chrome9:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
@@ -113,7 +115,7 @@ jobs:
           CYPRESS_URL: ${{ secrets.CYPRESS_URL }}
         with:
           browser: chrome
-  chrome15:
+  chrome10:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
