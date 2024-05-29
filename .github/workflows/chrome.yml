@@ -1,5 +1,7 @@
 name: visit page with chrome
 on:
+  schedule:
+    - cron: "09 * * * *"
   workflow_dispatch:
 
 jobs:
