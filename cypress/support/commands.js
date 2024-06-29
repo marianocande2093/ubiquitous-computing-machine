@@ -3,22 +3,12 @@ const randomNavigator = () => {
   return navigators[Math.floor(Math.random() * navigators.length)];
 };
 
-const randomScroll = (min = 150, max = 500) => {
-  return Math.floor(Math.random() * (max - min)) + min;
-};
-
-const randomScrollCoordinates = (coordinates) => {
-  coordinates.y += randomScroll();
-  return coordinates;
-};
-
-Cypress.Commands.add("scrollAndWait", (coordinates, duration, wait) => {
-  cy.scrollTo(coordinates.x, coordinates.y, {
+Cypress.Commands.add("scrollAndWait", (id, duration) => {
+  cy.get(`[id=${id}]`).scrollIntoView({
     easing: "linear",
     duration: duration,
+    timeout: 250000,
   });
-  randomScrollCoordinates(coordinates);
-  cy.wait(wait);
 });
 
 Cypress.Commands.overwrite("log", function (log, ...args) {
