@@ -1,7 +1,6 @@
 name: visit page with chrome 2
 on:
   schedule:
-    - cron: "19 * * * *"
     - cron: "41 * * * *"
   workflow_dispatch:
 
